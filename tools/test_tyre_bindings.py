@@ -4,7 +4,9 @@ import json,subprocess,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 cases=[]
-for p in sorted((ROOT/'dashboards').glob('*v0.3.1.simhubdash')):
+packages=sorted((ROOT/'dashboards').glob('*.simhubdash'))
+assert len(packages)==1,'Expected exactly one current dashboard package'
+for p in packages:
  with zipfile.ZipFile(p) as z:
   assert z.testzip() is None
   d=json.loads(z.read(p.stem+'/'+p.stem+'.djson'))
