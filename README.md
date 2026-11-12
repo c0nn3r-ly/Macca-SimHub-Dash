@@ -45,3 +45,8 @@
 [轮胎颜色修正说明](docs/tyre-color-fix.md)。
 
 仓库仅保留当前可导入文件、必要资源和绑定修正工具，不包含完整车辆包、旧版本或研究资料。素材与字体归属见 [NOTICE](NOTICE.md)。
+
+## 更多说明
+
+- [原车辅助屏预览](docs/auxiliary-displays.md)
+- [SimHub UDPConnector 安装步骤](docs/udpconnector-install.md)
