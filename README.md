@@ -2,7 +2,9 @@
 
 将 RSS GT-M Macca 72 EVO V8 的仪表与转速灯转换为 SimHub 配置，适配 SIMAGIC Zeus 配套的 MagicDash 4（800×480、顶部 15 颗转速灯）。
 
-当前版本：**v0.3**。
+当前版本：**v0.3**。建议使用 **SimHub 9.13.5 或更新版本**。
+
+旧版 SimHub 下曾出现卡顿，并使 MagicDash 返回 SIMAGIC 待机界面；保持 v0.3 原车布局和同一份实体灯配置不变，更新至 **9.13.5** 后，用户反馈恢复正常。无需更换仪表文件。
 
 ![仪表示例](docs/preview.png)
 
@@ -10,7 +12,7 @@
 
 ## 下载与安装
 
-1. 下载本仓库（Code → Download ZIP）并解压。
+1. 先安装 [SimHub 9.13.5 或更新版本](https://github.com/SHWotever/SimHub/releases/tag/9.13.5)，再下载本仓库（Code → Download ZIP）并解压。
 2. 安装 [MaccaRSSDisplay-Regular.ttf](fonts/MaccaRSSDisplay-Regular.ttf)，完全退出并重启 SimHub。字体名称应为 **Macca RSS Display**。
 3. 双击下方仪表包导入，在 SimHub → Devices → MagicDash 4 → Main dashboard 中选择对应的 **v0.3** 仪表。
 
@@ -34,7 +36,7 @@
 
 ## 当前限制
 
-- 已通过离线逻辑、阈值、缺失数据、缓存、字体字形与资源完整性检查；**Windows SimHub 导入、USB 稳定性和实物灯珠映射仍待验收**。
+- 已通过离线逻辑、阈值、缺失数据、缓存、字体字形与资源完整性检查。MagicDash 4 USB 下，v0.3 原车布局版＋实体灯配置已获用户反馈：更新至 SimHub 9.13.5 后恢复正常。屏幕转速灯版及其他设备未获实机验证，具体灯珠顺序仍需按设备确认。
 - 使用 **°C / psi** 遥测单位。无法识别轮胎配方时，采用车辆默认干胎目标。
 - TC2、PED、电池电压等 CSP 私有字段尚未接入，显示 `--`；其他不可用数据也可能显示 `--`。
 - 进站限速无法读取时默认 **80 km/h**。其他限速需同步调整仪表与 LED 公式中的 fallback。
