@@ -16,10 +16,7 @@
 2. 安装 [MaccaRSSDisplay-Regular.ttf](fonts/MaccaRSSDisplay-Regular.ttf)，完全退出并重启 SimHub。字体名称应为 **Macca RSS Display**。
 3. 双击下方仪表包导入，在 SimHub → Devices → MagicDash 4 → Main dashboard 中选择对应的 **v0.3.1** 仪表。
 
-| 仪表包 | 用途 |
-|---|---|
-| [原车布局版](dashboards/Macca%2072%20EVO%20-%20MagicDash%204%20v0.3.1.simhubdash) | 保留原车仪表布局，配合实体转速灯 |
-| [屏幕转速灯版](dashboards/Macca%2072%20EVO%20-%20Screen%20LEDs%20v0.3.1.simhubdash) | 顶部增加一排屏幕转速灯 |
+下载：[Macca 原车布局仪表 v0.3.1](dashboards/Macca%2072%20EVO%20-%20MagicDash%204%20v0.3.1.simhubdash)，配合 21 颗实体灯使用。
 
 实体灯：在 **MagicDash 4** 的 LED 配置中导入并加载 [21 灯配置](leds/Macca%2072%20EVO%20-%2021%20LEDs.ledsprofile)。编号为侧灯 **1–3**、顶部转速灯 **4–18**、侧灯 **19–21**；整个效果起始位置为 1。首次可用 [21 灯顺序测试](leds/MagicDash%204%20-%2021%20LED%20order%20test.ledsprofile) 确认。默认亮度 30%，使用新配置替换原 15 灯配置，仪表无需重装。详见 [灯效与安装说明](docs/led-21.md)。
 
@@ -37,7 +34,7 @@
 
 ## 当前限制
 
-- 已通过离线逻辑、阈值、缺失数据、缓存、字体字形与资源完整性检查。MagicDash 4 USB 下，v0.3 原车布局版＋实体灯配置已获用户反馈：更新至 SimHub 9.13.5 后恢复正常。屏幕转速灯版及其他设备未获实机验证，具体灯珠顺序仍需按设备确认。v0.3.1 颜色修正已通过 616 个离线绑定用例，仍待 Windows 实机颜色确认。
+- 已通过离线逻辑、阈值、缺失数据、缓存、字体字形与资源完整性检查。MagicDash 4 USB 下，v0.3 原车布局版＋实体灯配置已获用户反馈：更新至 SimHub 9.13.5 后恢复正常。其他设备未获实机验证，具体灯珠顺序仍需按设备确认。v0.3.1 颜色修正已通过 308 个离线绑定用例，仍待 Windows 实机颜色确认。
 - 使用 **°C / psi** 遥测单位。无法识别轮胎配方时，采用车辆默认干胎目标。
 - TC2、PED、电池电压等 CSP 私有字段尚未接入，显示 `--`；其他不可用数据也可能显示 `--`。
 - 进站限速无法读取时默认 **80 km/h**。其他限速需同步调整仪表与 LED 公式中的 fallback。
@@ -50,5 +47,4 @@
 ## 更多说明
 
 - [21 灯配置与灯效](docs/led-21.md)
-- [原车辅助屏预览](docs/auxiliary-displays.md)
 - [SimHub UDPConnector 安装步骤](docs/udpconnector-install.md)
